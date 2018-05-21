@@ -71,7 +71,7 @@ class PromotionCodeController extends Controller
         ]);
 
         //Message to the frontend
-        $message = 'new promotion code: PROMO-'.$newCode;
+        $message = 'Nuevo código promocional: PROMO-'.$newCode;
         
         return redirect()->back()->with(['message'=>$message, 'alert-class'=>'alert-success']);        
     }
@@ -90,7 +90,7 @@ class PromotionCodeController extends Controller
         $promotionCode->save();
 
         //Message to the frontend
-        $message = 'Promotion code used: '.$promotionCode->code;
+        $message = 'Código promocional usado: '.$promotionCode->code;
         
         return redirect()->back()->with(['message'=>$message, 'alert-class'=>'alert-warning']);       
     }
